@@ -1,0 +1,26 @@
+18:39:25 **** Build of configuration Debug for project assignment_image_processing ****
+make all 
+Building file: ../src/platform.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vitis/vivado_bitstream/export/vivado_bitstream/sw/vivado_bitstream/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building file: ../src/vitis_bare_metal_testing.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vitis_bare_metal_testing.o" -I/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vitis/vivado_bitstream/export/vivado_bitstream/sw/vivado_bitstream/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/vitis_bare_metal_testing.d" -MT"src/vitis_bare_metal_testing.o" -o "src/vitis_bare_metal_testing.o" "../src/vitis_bare_metal_testing.c"
+Finished building: ../src/vitis_bare_metal_testing.c
+ 
+Building target: assignment_image_processing.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vitis/vivado_bitstream/export/vivado_bitstream/sw/vivado_bitstream/standalone_psu_cortexa53_0/bsplib/lib -o "assignment_image_processing.elf" ./src/platform.o ./src/vitis_bare_metal_testing.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: assignment_image_processing.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size assignment_image_processing.elf  |tee "assignment_image_processing.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  41148	   2104	  20740	  63992	   f9f8	assignment_image_processing.elf
+Finished building: assignment_image_processing.elf.size
+ 
+
+18:39:26 Build Finished (took 431ms)
+

@@ -1,0 +1,21 @@
+15:02:33 **** Build of configuration Debug for project image_processing ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: image_processing.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/standalone_psu_cortexa53_0/bsplib/lib -o "image_processing.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: image_processing.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size image_processing.elf  |tee "image_processing.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  45948	   2104	  20804	  68856	  10cf8	image_processing.elf
+Finished building: image_processing.elf.size
+ 
+
+15:02:33 Build Finished (took 392ms)
+

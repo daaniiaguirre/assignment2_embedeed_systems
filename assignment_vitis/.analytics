@@ -1,0 +1,13 @@
+timestamp=[2025-11-07 18:23:54], mode=WORKBENCH_START, duration=0:00:03.671, duration_ms=3671, data={}
+timestamp=[2025-11-07 18:23:54], mode=WORKBENCH_UI_INIT, duration=0:00:00.279, duration_ms=279, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-11-07 18:23:54], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.206, duration_ms=206, data={}
+timestamp=[2025-11-07 18:27:57], mode=APP_CREATION, duration=0:00:15.283, duration_ms=15283, data={name=assignment_image_processing, project_type=sdk, os=standalone, processor=psu_cortexa53, runtime=cpp, platform=vivado_bitstream, application_type=application}
+timestamp=[2025-11-07 18:34:00], mode=PLATFORM_GENERATION, duration=0:00:25.874, duration_ms=25874, data={name=vivado_bitstream}
+timestamp=[2025-11-07 18:34:06], mode=BUILD, duration=0:00:00.441, duration_ms=441, data={name=assignment_image_processing, configuration=Debug, clean_build=false}
+timestamp=[2025-11-07 18:38:51], mode=PLATFORM_GENERATION, duration=0:00:04.836, duration_ms=4836, data={name=vivado_bitstream}
+timestamp=[2025-11-07 18:38:52], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=assignment_image_processing, configuration=Debug, clean_build=true}
+timestamp=[2025-11-07 18:38:56], mode=PLATFORM_GENERATION, duration=0:00:04.612, duration_ms=4612, data={name=vivado_bitstream}
+timestamp=[2025-11-07 18:38:57], mode=BUILD, duration=0:00:00.234, duration_ms=234, data={name=assignment_image_processing, configuration=Debug, clean_build=true}
+timestamp=[2025-11-07 18:39:22], mode=PLATFORM_GENERATION, duration=0:00:25.174, duration_ms=25174, data={name=vivado_bitstream}
+timestamp=[2025-11-07 18:39:26], mode=BUILD, duration=0:00:00.435, duration_ms=435, data={name=assignment_image_processing, configuration=Debug, clean_build=false}
+timestamp=[2025-11-07 18:39:32], mode=BUILD, duration=0:00:05.651, duration_ms=5651, data={name=assignment_image_processing_system, configuration=Debug, clean_build=false}

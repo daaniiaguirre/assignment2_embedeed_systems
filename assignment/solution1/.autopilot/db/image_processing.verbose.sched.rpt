@@ -1,0 +1,161 @@
+
+
+================================================================
+== Vitis HLS Report for 'image_processing'
+================================================================
+* Date:           Sat Nov  8 10:48:50 2025
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        assignment
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynquplus
+* Target device:  xczu3eg-sbva484-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  4.056 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |  max |   Type  |
+    +---------+---------+-----------+-----------+------+------+---------+
+    |     2502|     2502|  25.020 us|  25.020 us|  2503|  2503|       no|
+    +---------+---------+-----------+-----------+------+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_16_1  |     2500|     2500|         2|          1|          1|  2500|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 1 2 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.45>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%spectopmodule_ln10 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_5" [image_processing.cpp:10]   --->   Operation 6 'spectopmodule' 'spectopmodule_ln10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %in_img, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_2, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %in_img, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 8 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %in_img, i64 666, i64 207, i64 1"   --->   Operation 9 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %in_img"   --->   Operation 10 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %out_img, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_4, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i8 %out_img, void @empty_3, i32 0, i32 0, void @empty_0, i32 1, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 12 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specmemcore_ln0 = specmemcore void @_ssdm_op_SpecMemCore, i8 %out_img, i64 666, i64 207, i64 1"   --->   Operation 13 'specmemcore' 'specmemcore_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i8 %out_img"   --->   Operation 14 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i32 0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_1, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.48ns)   --->   "%store_ln16 = store i12 0, i12 %i" [image_processing.cpp:16]   --->   Operation 16 'store' 'store_ln16' <Predicate = true> <Delay = 0.48>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln16 = br void %for.body" [image_processing.cpp:16]   --->   Operation 17 'br' 'br_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%i_1 = load i12 %i" [image_processing.cpp:16]   --->   Operation 18 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 19 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.86ns)   --->   "%icmp_ln16 = icmp_eq  i12 %i_1, i12 2500" [image_processing.cpp:16]   --->   Operation 20 'icmp' 'icmp_ln16' <Predicate = true> <Delay = 0.86> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.86> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 2500, i64 2500, i64 2500"   --->   Operation 21 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.96ns)   --->   "%add_ln16 = add i12 %i_1, i12 1" [image_processing.cpp:16]   --->   Operation 22 'add' 'add_ln16' <Predicate = true> <Delay = 0.96> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.96> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%br_ln16 = br i1 %icmp_ln16, void %for.body.split, void %for.end" [image_processing.cpp:16]   --->   Operation 23 'br' 'br_ln16' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%i_cast = zext i12 %i_1" [image_processing.cpp:16]   --->   Operation 24 'zext' 'i_cast' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%in_img_addr = getelementptr i8 %in_img, i64 0, i64 %i_cast" [image_processing.cpp:17]   --->   Operation 25 'getelementptr' 'in_img_addr' <Predicate = (!icmp_ln16)> <Delay = 0.00>
+ST_1 : Operation 26 [2/2] (1.35ns)   --->   "%in_img_load = load i12 %in_img_addr" [image_processing.cpp:17]   --->   Operation 26 'load' 'in_img_load' <Predicate = (!icmp_ln16)> <Delay = 1.35> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 2500> <RAM>
+ST_1 : Operation 27 [1/1] (0.48ns)   --->   "%store_ln16 = store i12 %add_ln16, i12 %i" [image_processing.cpp:16]   --->   Operation 27 'store' 'store_ln16' <Predicate = (!icmp_ln16)> <Delay = 0.48>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%ret_ln23 = ret" [image_processing.cpp:23]   --->   Operation 38 'ret' 'ret_ln23' <Predicate = (icmp_ln16)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 4.05>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%specloopname_ln16 = specloopname void @_ssdm_op_SpecLoopName, void @empty_6" [image_processing.cpp:16]   --->   Operation 28 'specloopname' 'specloopname_ln16' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/2] (1.35ns)   --->   "%in_img_load = load i12 %in_img_addr" [image_processing.cpp:17]   --->   Operation 29 'load' 'in_img_load' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 2500> <RAM>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln17 = zext i8 %in_img_load" [image_processing.cpp:17]   --->   Operation 30 'zext' 'zext_ln17' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.90ns)   --->   "%temp = add i9 %zext_ln17, i9 50" [image_processing.cpp:17]   --->   Operation 31 'add' 'temp' <Predicate = true> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %temp, i32 8" [image_processing.cpp:18]   --->   Operation 32 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.90ns)   --->   "%add_ln21 = add i8 %in_img_load, i8 50" [image_processing.cpp:21]   --->   Operation 33 'add' 'add_ln21' <Predicate = true> <Delay = 0.90> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.90> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.44ns)   --->   "%select_ln21 = select i1 %tmp, i8 255, i8 %add_ln21" [image_processing.cpp:21]   --->   Operation 34 'select' 'select_ln21' <Predicate = true> <Delay = 0.44> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.44> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%out_img_addr = getelementptr i8 %out_img, i64 0, i64 %i_cast" [image_processing.cpp:21]   --->   Operation 35 'getelementptr' 'out_img_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (1.35ns)   --->   "%store_ln21 = store i8 %select_ln21, i12 %out_img_addr" [image_processing.cpp:21]   --->   Operation 36 'store' 'store_ln21' <Predicate = true> <Delay = 1.35> <CoreInst = "RAM_1P">   --->   Core 88 'RAM_1P' <Latency = 1> <II = 1> <Delay = 1.35> <Storage> <Opcode : 'load' 'store'> <Ports = 1> <Width = 8> <Depth = 2500> <RAM>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln16 = br void %for.body" [image_processing.cpp:16]   --->   Operation 37 'br' 'br_ln16' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 1.45ns
+The critical path consists of the following:
+	'alloca' operation ('i') [3]  (0 ns)
+	'load' operation ('i', image_processing.cpp:16) on local variable 'i' [17]  (0 ns)
+	'add' operation ('add_ln16', image_processing.cpp:16) [21]  (0.962 ns)
+	'store' operation ('store_ln16', image_processing.cpp:16) of variable 'add_ln16', image_processing.cpp:16 on local variable 'i' [35]  (0.489 ns)
+
+ <State 2>: 4.06ns
+The critical path consists of the following:
+	'load' operation ('in_img_load', image_processing.cpp:17) on array 'in_img' [27]  (1.35 ns)
+	'add' operation ('temp', image_processing.cpp:17) [29]  (0.907 ns)
+	'select' operation ('select_ln21', image_processing.cpp:21) [32]  (0.445 ns)
+	'store' operation ('store_ln21', image_processing.cpp:21) of variable 'select_ln21', image_processing.cpp:21 on array 'out_img' [34]  (1.35 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

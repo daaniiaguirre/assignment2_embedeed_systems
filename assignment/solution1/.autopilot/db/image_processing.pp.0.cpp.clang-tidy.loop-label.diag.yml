@@ -1,0 +1,13 @@
+---
+MainSourceFile:  /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment/solution1/.autopilot/db/image_processing.pp.0.cpp
+Diagnostics:     
+  - DiagnosticName:  xilinx-label-all-loops
+    Message:         'Added loop label VITIS_LOOP_16_1:  '
+    FileOffset:      16
+    FilePath:        image_processing.cpp
+    Replacements:    
+      - FilePath:        /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment/solution1/.autopilot/db/image_processing.pp.0.cpp
+        Offset:          16909
+        Length:          0
+        ReplacementText: 'VITIS_LOOP_16_1: '
+...

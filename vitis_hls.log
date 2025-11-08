@@ -1,0 +1,38 @@
+INFO: [HLS 200-10] Running '/home/dani/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'dani' on host 'dani-ASUS-TUF-Gaming-A15' (Linux_x86_64 version 6.8.0-87-generic) on Sat Nov 08 19:20:05 CET 2025
+INFO: [HLS 200-10] On os Ubuntu 22.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment'
+Sourcing Tcl script '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment/solution1/csim.tcl'
+INFO: [HLS 200-1510] Running: source /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment/solution1/csim.tcl
+INFO: [HLS 200-1510] Running: open_project assignment 
+INFO: [HLS 200-10] Opening project '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment'.
+INFO: [HLS 200-1510] Running: set_top image_processing 
+INFO: [HLS 200-1510] Running: add_files image_processing.cpp 
+INFO: [HLS 200-10] Adding design file 'image_processing.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb image_processing_tb.cpp -cflags -Wno-unknown-pragmas -Wno-unknown-pragmas -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'image_processing_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xczu3eg-sbva484-1-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -output=/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vivado_ip_final
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1510] Running: set_part xczu3eg-sbva484-1-i 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -output /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vivado_ip_final -rtl verilog 
+INFO: [HLS 200-1510] Running: source ./assignment/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name image_processing image_processing 
+INFO: [HLS 200-1510] Running: csim_design -quiet 
+Running Dispatch Server on port: 39777
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+make: 'csim.exe' is up to date.
+Helloooo, let's do the test
+Test passed!
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 0.03 seconds. CPU system time: 0.08 seconds. Elapsed time: 0.1 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 1.15 seconds. Total CPU system time: 0.31 seconds. Total elapsed time: 11.36 seconds; peak allocated memory: 230.113 MB.

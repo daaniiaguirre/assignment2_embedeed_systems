@@ -1,0 +1,2 @@
+remark: image_processing.cpp:17:29: Volatile or Atomic access cannot be transformed _XLX_SEP_ for.body.load.3 in_img  image_processing(unsigned char volatile*, unsigned char volatile*) 
+remark: image_processing.cpp:21:20: Volatile or Atomic access cannot be transformed _XLX_SEP_ for.body.store.14 out_img  image_processing(unsigned char volatile*, unsigned char volatile*) 

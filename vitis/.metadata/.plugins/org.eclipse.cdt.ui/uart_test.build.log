@@ -1,0 +1,21 @@
+14:03:16 **** Build of configuration Debug for project uart_test ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: uart_test.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/standalone_psu_cortexa53_0/bsplib/lib -o "uart_test.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: uart_test.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size uart_test.elf  |tee "uart_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  35196	   2088	  20756	  58040	   e2b8	uart_test.elf
+Finished building: uart_test.elf.size
+ 
+
+14:03:16 Build Finished (took 387ms)
+

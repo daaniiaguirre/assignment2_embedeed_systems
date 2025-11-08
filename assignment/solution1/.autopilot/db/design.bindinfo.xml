@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln16_fu_106_p2" SOURCE="image_processing.cpp:16" VARIABLE="icmp_ln16" MODULE="image_processing" LOOP="VITIS_LOOP_16_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln16_fu_112_p2" SOURCE="image_processing.cpp:16" VARIABLE="add_ln16" MODULE="image_processing" LOOP="VITIS_LOOP_16_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="temp_fu_132_p2" SOURCE="image_processing.cpp:17" VARIABLE="temp" MODULE="image_processing" LOOP="VITIS_LOOP_16_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln21_fu_146_p2" SOURCE="image_processing.cpp:21" VARIABLE="add_ln21" MODULE="image_processing" LOOP="VITIS_LOOP_16_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op select" ID="" IMPL="auto_sel" LATENCY="0" OPTYPE="select" PRAGMA="" RTLNAME="out_img_d0" SOURCE="image_processing.cpp:21" VARIABLE="select_ln21" MODULE="image_processing" LOOP="VITIS_LOOP_16_1" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="adapter" DISPLAY="bind_adapter axilite" ID="" IMPL="" LATENCY="" OPTYPE="" PRAGMA="yes" RTLNAME="AXI_CPU_s_axi_U" SOURCE="" VARIABLE="" MODULE="image_processing" LOOP="" BUNDLEDNAME="AXI_CPU" DSP="0" BRAM="4" URAM="0"/>
+</BindInfo>

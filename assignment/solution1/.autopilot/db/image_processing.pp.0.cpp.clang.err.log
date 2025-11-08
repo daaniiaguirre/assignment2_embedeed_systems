@@ -1,0 +1,16 @@
+/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment/solution1/csynth.tcl:15:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=image_processing_XLX_SEP_ PragmaOptions=name=image_processing_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=image_processing
+        ^
+/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment/solution1/directives.tcl:6:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=top_XLX_SEP_ PragmaContext=directive_XLX_SEP_ PragmaFunction=image_processing_XLX_SEP_ PragmaOptions=name=image_processing_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLSDIRECTIVE TOP name=image_processing
+        ^
+image_processing.cpp:11:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_processing_XLX_SEP_ PragmaOptions=s_axilite port=return bundle=AXI_CPU_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=return bundle=AXI_CPU
+        ^
+image_processing.cpp:12:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_processing_XLX_SEP_ PragmaOptions=s_axilite port=in_img bundle=AXI_CPU_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=in_img bundle=AXI_CPU
+        ^
+image_processing.cpp:13:9: warning: HLS pragma dump _XLX_SEP_ PragmaIsValid=1_XLX_SEP_ PragmaType=interface_XLX_SEP_ PragmaContext=_XLX_SEP_ PragmaFunction=image_processing_XLX_SEP_ PragmaOptions=s_axilite port=out_img bundle=AXI_CPU_XLX_SEP_ [-Wdump-hls-pragmas]
+#pragma HLS INTERFACE s_axilite port=out_img bundle=AXI_CPU
+        ^
+5 warnings generated.

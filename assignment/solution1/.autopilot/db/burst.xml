@@ -1,0 +1,5 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="NonSimpleMemoryAccessMissed" src_info="image_processing.cpp:17:29" msg_id="214-227" msg_severity="INFO" msg_body="Volatile or Atomic access cannot be transformed" resolution="214-227" ID="for.body.load.3" VarName="in_img" ParentFunc="image_processing(unsigned char volatile*, unsigned char volatile*)"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="NonSimpleMemoryAccessMissed" src_info="image_processing.cpp:21:20" msg_id="214-227" msg_severity="INFO" msg_body="Volatile or Atomic access cannot be transformed" resolution="214-227" ID="for.body.store.14" VarName="out_img" ParentFunc="image_processing(unsigned char volatile*, unsigned char volatile*)"/>
+</VitisHLS:BurstInfo>
+

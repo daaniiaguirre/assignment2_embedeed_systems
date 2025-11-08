@@ -1,0 +1,1322 @@
+13:35:13 DEBUG : Logs will be stored at '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/IDE.log'.
+13:35:14 INFO  : Launching XSCT server: xsct -n  -interactive /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/temp_xsdb_launch_script.tcl
+13:35:14 INFO  : Registering command handlers for Vitis TCF services
+13:35:14 INFO  : Platform repository initialization has completed.
+13:35:15 INFO  : XSCT server has started successfully.
+13:35:15 INFO  : Successfully done setting XSCT server connection channel  
+13:35:15 INFO  : Successfully done query RDI_DATADIR 
+13:35:15 INFO  : Successfully done setting workspace for the tool. 
+13:35:16 INFO  : plnx-install-location is set to ''
+13:36:47 INFO  : Result from executing command 'getProjects': bitstream_final
+13:36:47 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+13:36:47 WARN  : An unexpected exception occurred in the module 'platform project logging'
+13:36:48 INFO  : Platform 'bitstream_final' is added to custom repositories.
+13:36:55 INFO  : Platform 'bitstream_final' is added to custom repositories.
+13:46:39 INFO  : Result from executing command 'getProjects': bitstream_final
+13:46:39 INFO  : Result from executing command 'getPlatforms': bitstream_final|/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/bitstream_final.xpfm;xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+13:46:42 INFO  : Checking for BSP changes to sync application flags for project 'hello_world'...
+13:46:48 INFO  : Updating application flags with new BSP settings...
+13:46:48 INFO  : Successfully updated application flags for project hello_world.
+13:46:51 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+13:47:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:47:24 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+13:47:24 INFO  : 'jtag frequency' command is executed.
+13:47:24 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:47:24 INFO  : Context for 'APU' is selected.
+13:47:24 INFO  : System reset is completed.
+13:47:27 INFO  : 'after 3000' command is executed.
+13:47:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+13:47:31 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/_ide/bitstream/bitstream_final.bit"
+13:47:31 INFO  : Context for 'APU' is selected.
+13:47:31 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+13:47:31 INFO  : 'configparams force-mem-access 1' command is executed.
+13:47:31 INFO  : Context for 'APU' is selected.
+13:47:31 INFO  : Boot mode is read from the target.
+13:47:31 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:47:31 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:47:32 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:47:32 INFO  : 'set bp_47_32_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+13:47:33 INFO  : 'con -block -timeout 60' command is executed.
+13:47:33 INFO  : 'bpremove $bp_47_32_fsbl_bp' command is executed.
+13:47:33 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:47:33 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:47:33 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/Debug/hello_world.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:47:33 INFO  : 'configparams force-mem-access 0' command is executed.
+13:47:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_47_32_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_47_32_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/Debug/hello_world.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:47:33 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:47:33 INFO  : 'con' command is executed.
+13:47:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:47:33 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world_system/_ide/scripts/systemdebugger_hello_world_system_standalone.tcl'
+13:53:07 INFO  : Checking for BSP changes to sync application flags for project 'uart_test'...
+13:53:10 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+13:53:43 INFO  : No changes in MSS file content so sources will not be generated.
+13:54:13 INFO  : Disconnected from the channel tcfchan#3.
+13:54:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:54:13 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+13:54:13 INFO  : 'jtag frequency' command is executed.
+13:54:13 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:54:13 INFO  : Context for 'APU' is selected.
+13:54:14 INFO  : System reset is completed.
+13:54:17 INFO  : 'after 3000' command is executed.
+13:54:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+13:54:20 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/_ide/bitstream/bitstream_final.bit"
+13:54:20 INFO  : Context for 'APU' is selected.
+13:54:20 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+13:54:20 INFO  : 'configparams force-mem-access 1' command is executed.
+13:54:20 INFO  : Context for 'APU' is selected.
+13:54:20 INFO  : Boot mode is read from the target.
+13:54:20 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:54:20 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:54:20 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:54:20 INFO  : 'set bp_54_20_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+13:54:21 INFO  : 'con -block -timeout 60' command is executed.
+13:54:21 INFO  : 'bpremove $bp_54_20_fsbl_bp' command is executed.
+13:54:21 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:54:21 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:54:22 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/Debug/hello_world.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:54:22 INFO  : 'configparams force-mem-access 0' command is executed.
+13:54:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_54_20_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_54_20_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/Debug/hello_world.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:54:22 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:54:22 INFO  : 'con' command is executed.
+13:54:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:54:22 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world_system/_ide/scripts/systemdebugger_hello_world_system_standalone.tcl'
+13:55:30 INFO  : Disconnected from the channel tcfchan#5.
+13:55:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:55:30 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+13:55:30 INFO  : 'jtag frequency' command is executed.
+13:55:30 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:55:30 INFO  : Context for 'APU' is selected.
+13:55:31 INFO  : System reset is completed.
+13:55:34 INFO  : 'after 3000' command is executed.
+13:55:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+13:55:37 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/_ide/bitstream/bitstream_final.bit"
+13:55:37 INFO  : Context for 'APU' is selected.
+13:55:37 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+13:55:37 INFO  : 'configparams force-mem-access 1' command is executed.
+13:55:37 INFO  : Context for 'APU' is selected.
+13:55:37 INFO  : Boot mode is read from the target.
+13:55:37 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:55:37 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:55:37 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:55:37 INFO  : 'set bp_55_37_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+13:55:38 INFO  : 'con -block -timeout 60' command is executed.
+13:55:38 INFO  : 'bpremove $bp_55_37_fsbl_bp' command is executed.
+13:55:38 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:55:38 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:55:39 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/Debug/hello_world.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:55:39 INFO  : 'configparams force-mem-access 0' command is executed.
+13:55:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_55_37_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_55_37_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/Debug/hello_world.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:55:39 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:55:39 INFO  : 'con' command is executed.
+13:55:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:55:39 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world_system/_ide/scripts/systemdebugger_hello_world_system_standalone.tcl'
+13:56:24 INFO  : Disconnected from the channel tcfchan#6.
+13:56:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:56:25 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+13:56:25 INFO  : 'jtag frequency' command is executed.
+13:56:25 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:56:25 INFO  : Context for 'APU' is selected.
+13:56:25 INFO  : System reset is completed.
+13:56:28 INFO  : 'after 3000' command is executed.
+13:56:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+13:56:31 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/_ide/bitstream/bitstream_final.bit"
+13:56:31 INFO  : Context for 'APU' is selected.
+13:56:31 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+13:56:31 INFO  : 'configparams force-mem-access 1' command is executed.
+13:56:31 INFO  : Context for 'APU' is selected.
+13:56:31 INFO  : Boot mode is read from the target.
+13:56:31 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:56:32 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:56:32 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:56:32 INFO  : 'set bp_56_32_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+13:56:33 INFO  : 'con -block -timeout 60' command is executed.
+13:56:33 INFO  : 'bpremove $bp_56_32_fsbl_bp' command is executed.
+13:56:33 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:56:33 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:56:33 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/Debug/uart_test.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:56:33 INFO  : 'configparams force-mem-access 0' command is executed.
+13:56:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_56_32_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_56_32_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/Debug/uart_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:56:33 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:56:33 INFO  : 'con' command is executed.
+13:56:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:56:33 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test_system/_ide/scripts/systemdebugger_uart_test_system_standalone.tcl'
+13:57:27 INFO  : Disconnected from the channel tcfchan#7.
+13:57:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:57:27 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+13:57:27 INFO  : 'jtag frequency' command is executed.
+13:57:27 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:57:27 INFO  : Context for 'APU' is selected.
+13:57:27 INFO  : System reset is completed.
+13:57:30 INFO  : 'after 3000' command is executed.
+13:57:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+13:57:34 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/_ide/bitstream/bitstream_final.bit"
+13:57:34 INFO  : Context for 'APU' is selected.
+13:57:34 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+13:57:34 INFO  : 'configparams force-mem-access 1' command is executed.
+13:57:34 INFO  : Context for 'APU' is selected.
+13:57:34 INFO  : Boot mode is read from the target.
+13:57:34 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:57:34 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:57:34 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:57:34 INFO  : 'set bp_57_34_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+13:57:35 INFO  : 'con -block -timeout 60' command is executed.
+13:57:35 INFO  : 'bpremove $bp_57_34_fsbl_bp' command is executed.
+13:57:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:57:35 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:57:36 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/Debug/uart_test.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:57:36 INFO  : 'configparams force-mem-access 0' command is executed.
+13:57:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_57_34_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_57_34_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/Debug/uart_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:57:36 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:57:36 INFO  : 'con' command is executed.
+13:57:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:57:36 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test_system/_ide/scripts/systemdebugger_uart_test_system_standalone.tcl'
+13:57:51 INFO  : Disconnected from the channel tcfchan#8.
+13:57:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:57:52 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+13:57:52 INFO  : 'jtag frequency' command is executed.
+13:57:52 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:57:52 INFO  : Context for 'APU' is selected.
+13:57:53 INFO  : System reset is completed.
+13:57:56 INFO  : 'after 3000' command is executed.
+13:57:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+13:57:59 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/_ide/bitstream/bitstream_final.bit"
+13:57:59 INFO  : Context for 'APU' is selected.
+13:57:59 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+13:57:59 INFO  : 'configparams force-mem-access 1' command is executed.
+13:57:59 INFO  : Context for 'APU' is selected.
+13:57:59 INFO  : Boot mode is read from the target.
+13:57:59 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:57:59 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:57:59 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:57:59 INFO  : 'set bp_57_59_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+13:58:01 INFO  : 'con -block -timeout 60' command is executed.
+13:58:01 INFO  : 'bpremove $bp_57_59_fsbl_bp' command is executed.
+13:58:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:58:01 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:58:01 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/Debug/hello_world.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:58:01 INFO  : 'configparams force-mem-access 0' command is executed.
+13:58:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_57_59_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_57_59_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world/Debug/hello_world.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:58:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:58:01 INFO  : 'con' command is executed.
+13:58:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:58:01 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/hello_world_system/_ide/scripts/systemdebugger_hello_world_system_standalone.tcl'
+13:58:13 INFO  : Disconnected from the channel tcfchan#9.
+13:58:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:58:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+13:58:23 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+13:58:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:58:42 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+13:58:42 INFO  : 'jtag frequency' command is executed.
+13:58:42 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:58:42 INFO  : Context for 'APU' is selected.
+13:58:42 INFO  : System reset is completed.
+13:58:45 INFO  : 'after 3000' command is executed.
+13:58:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+13:58:48 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/_ide/bitstream/bitstream_final.bit"
+13:58:48 INFO  : Context for 'APU' is selected.
+13:58:48 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+13:58:48 INFO  : 'configparams force-mem-access 1' command is executed.
+13:58:48 INFO  : Context for 'APU' is selected.
+13:58:48 INFO  : Boot mode is read from the target.
+13:58:48 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:58:48 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:58:49 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:58:49 INFO  : 'set bp_58_49_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+13:58:50 INFO  : 'con -block -timeout 60' command is executed.
+13:58:50 INFO  : 'bpremove $bp_58_49_fsbl_bp' command is executed.
+13:58:50 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:58:50 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:58:50 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/Debug/uart_test.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:58:50 INFO  : 'configparams force-mem-access 0' command is executed.
+13:58:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_58_49_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_58_49_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/Debug/uart_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:58:50 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:58:50 INFO  : 'con' command is executed.
+13:58:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:58:50 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test_system/_ide/scripts/systemdebugger_uart_test_system_standalone.tcl'
+13:59:09 INFO  : Disconnected from the channel tcfchan#10.
+13:59:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:59:09 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+13:59:09 INFO  : 'jtag frequency' command is executed.
+13:59:09 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+13:59:09 INFO  : Context for 'APU' is selected.
+13:59:09 INFO  : System reset is completed.
+13:59:12 INFO  : 'after 3000' command is executed.
+13:59:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+13:59:16 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/_ide/bitstream/bitstream_final.bit"
+13:59:16 INFO  : Context for 'APU' is selected.
+13:59:16 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+13:59:16 INFO  : 'configparams force-mem-access 1' command is executed.
+13:59:16 INFO  : Context for 'APU' is selected.
+13:59:16 INFO  : Boot mode is read from the target.
+13:59:16 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:59:16 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:59:16 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:59:16 INFO  : 'set bp_59_16_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+13:59:17 INFO  : 'con -block -timeout 60' command is executed.
+13:59:17 INFO  : 'bpremove $bp_59_16_fsbl_bp' command is executed.
+13:59:17 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:59:17 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+13:59:18 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/Debug/uart_test.elf' is downloaded to processor 'psu_cortexa53_0'.
+13:59:18 INFO  : 'configparams force-mem-access 0' command is executed.
+13:59:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_59_16_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_59_16_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/Debug/uart_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:59:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+13:59:18 INFO  : 'con' command is executed.
+13:59:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+13:59:18 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test_system/_ide/scripts/systemdebugger_uart_test_system_standalone.tcl'
+14:02:36 INFO  : Result from executing command 'removePlatformRepo': 
+14:03:08 INFO  : Result from executing command 'getProjects': bitstream_final
+14:03:08 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+14:03:11 INFO  : Checking for BSP changes to sync application flags for project 'uart_test'...
+14:03:18 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+14:03:29 INFO  : Disconnected from the channel tcfchan#11.
+14:03:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:03:29 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+14:03:29 INFO  : 'jtag frequency' command is executed.
+14:03:29 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:03:29 INFO  : Context for 'APU' is selected.
+14:03:29 INFO  : System reset is completed.
+14:03:32 INFO  : 'after 3000' command is executed.
+14:03:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:03:36 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/_ide/bitstream/bitstream_final.bit"
+14:03:36 INFO  : Context for 'APU' is selected.
+14:03:36 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+14:03:36 INFO  : 'configparams force-mem-access 1' command is executed.
+14:03:36 INFO  : Context for 'APU' is selected.
+14:03:36 INFO  : Boot mode is read from the target.
+14:03:36 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:03:36 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:03:36 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:03:36 INFO  : 'set bp_3_36_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+14:03:37 INFO  : 'con -block -timeout 60' command is executed.
+14:03:37 INFO  : 'bpremove $bp_3_36_fsbl_bp' command is executed.
+14:03:37 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:03:37 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:03:38 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/Debug/uart_test.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:03:38 INFO  : 'configparams force-mem-access 0' command is executed.
+14:03:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_3_36_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_3_36_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test/Debug/uart_test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:03:38 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:03:38 INFO  : 'con' command is executed.
+14:03:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+14:03:38 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/uart_test_system/_ide/scripts/systemdebugger_uart_test_system_standalone.tcl'
+14:10:25 INFO  : Checking for BSP changes to sync application flags for project 'image_processing'...
+14:10:28 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+14:14:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:14:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:14:37 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:16:37 INFO  : Result from executing command 'removePlatformRepo': 
+14:17:07 INFO  : Result from executing command 'getProjects': bitstream_final
+14:17:07 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+14:17:10 INFO  : Checking for BSP changes to sync application flags for project 'image_processing'...
+14:17:18 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+14:18:36 INFO  : Disconnected from the channel tcfchan#15.
+14:18:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:18:38 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+14:18:38 INFO  : 'jtag frequency' command is executed.
+14:18:38 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:18:38 INFO  : Context for 'APU' is selected.
+14:18:38 INFO  : System reset is completed.
+14:18:41 INFO  : 'after 3000' command is executed.
+14:18:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:18:44 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:18:44 INFO  : Context for 'APU' is selected.
+14:18:44 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+14:18:44 INFO  : 'configparams force-mem-access 1' command is executed.
+14:18:45 INFO  : Context for 'APU' is selected.
+14:18:45 INFO  : Boot mode is read from the target.
+14:18:45 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:18:45 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:18:45 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:18:45 INFO  : 'set bp_18_45_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+14:18:46 INFO  : 'con -block -timeout 60' command is executed.
+14:18:46 INFO  : 'bpremove $bp_18_45_fsbl_bp' command is executed.
+14:18:46 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:18:46 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:18:46 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:18:46 INFO  : 'configparams force-mem-access 0' command is executed.
+14:18:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_18_45_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_18_45_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:18:46 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:18:46 INFO  : 'con' command is executed.
+14:18:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+14:18:46 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing_system/_ide/scripts/systemdebugger_image_processing_system_standalone.tcl'
+14:23:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:23:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:23:49 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:27:03 INFO  : Result from executing command 'removePlatformRepo': 
+14:27:37 INFO  : Result from executing command 'getProjects': bitstream_final
+14:27:37 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+14:27:40 INFO  : Checking for BSP changes to sync application flags for project 'image_processing'...
+14:27:48 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+14:28:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:28:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:28:38 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:35:33 INFO  : Checking for BSP changes to sync application flags for project 'test_pl'...
+14:37:47 INFO  : Result from executing command 'removePlatformRepo': 
+14:38:28 INFO  : Result from executing command 'getProjects': bitstream_final
+14:38:28 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+14:38:31 INFO  : Checking for BSP changes to sync application flags for project 'test_pl'...
+14:38:39 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+14:39:35 INFO  : Disconnected from the channel tcfchan#20.
+14:39:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:39:37 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+14:39:37 INFO  : 'jtag frequency' command is executed.
+14:39:37 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:39:37 INFO  : Context for 'APU' is selected.
+14:39:37 INFO  : System reset is completed.
+14:39:40 INFO  : 'after 3000' command is executed.
+14:39:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:39:43 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl/_ide/bitstream/bitstream_final.bit"
+14:39:43 INFO  : Context for 'APU' is selected.
+14:39:43 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+14:39:43 INFO  : 'configparams force-mem-access 1' command is executed.
+14:39:43 INFO  : Context for 'APU' is selected.
+14:39:43 INFO  : Boot mode is read from the target.
+14:39:43 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:39:43 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:39:44 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:39:44 INFO  : 'set bp_39_44_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+14:39:45 INFO  : 'con -block -timeout 60' command is executed.
+14:39:45 INFO  : 'bpremove $bp_39_44_fsbl_bp' command is executed.
+14:39:45 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:39:45 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:39:45 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl/Debug/test_pl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:39:45 INFO  : 'configparams force-mem-access 0' command is executed.
+14:39:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_39_44_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_39_44_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl/Debug/test_pl.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:39:45 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:39:45 INFO  : 'con' command is executed.
+14:39:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+14:39:45 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl_system/_ide/scripts/systemdebugger_test_pl_system_standalone.tcl'
+14:40:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:40:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:40:17 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl/_ide/bitstream/bitstream_final.bit"
+14:40:43 INFO  : Disconnected from the channel tcfchan#27.
+14:40:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:40:43 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+14:40:43 INFO  : 'jtag frequency' command is executed.
+14:40:43 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:40:43 INFO  : Context for 'APU' is selected.
+14:40:43 INFO  : System reset is completed.
+14:40:46 INFO  : 'after 3000' command is executed.
+14:40:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:40:49 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl/_ide/bitstream/bitstream_final.bit"
+14:40:49 INFO  : Context for 'APU' is selected.
+14:40:49 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+14:40:49 INFO  : 'configparams force-mem-access 1' command is executed.
+14:40:49 INFO  : Context for 'APU' is selected.
+14:40:49 INFO  : Boot mode is read from the target.
+14:40:49 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:40:49 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:40:50 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:40:50 INFO  : 'set bp_40_50_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+14:40:51 INFO  : 'con -block -timeout 60' command is executed.
+14:40:51 INFO  : 'bpremove $bp_40_50_fsbl_bp' command is executed.
+14:40:51 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:40:51 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:40:51 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl/Debug/test_pl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:40:51 INFO  : 'configparams force-mem-access 0' command is executed.
+14:40:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_40_50_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_40_50_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl/Debug/test_pl.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:40:51 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:40:51 INFO  : 'con' command is executed.
+14:40:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+14:40:51 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/test_pl_system/_ide/scripts/systemdebugger_test_pl_system_standalone.tcl'
+14:46:29 INFO  : Checking for BSP changes to sync application flags for project 'image_processing'...
+14:46:31 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+14:47:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:47:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:47:12 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:47:38 INFO  : Result from executing command 'removePlatformRepo': 
+14:48:08 INFO  : Result from executing command 'getProjects': bitstream_final
+14:48:08 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+14:48:11 INFO  : Checking for BSP changes to sync application flags for project 'image_processing'...
+14:48:18 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+14:48:51 INFO  : Disconnected from the channel tcfchan#28.
+14:48:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:48:52 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+14:48:52 INFO  : 'jtag frequency' command is executed.
+14:48:52 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:48:52 INFO  : Context for 'APU' is selected.
+14:48:53 INFO  : System reset is completed.
+14:48:56 INFO  : 'after 3000' command is executed.
+14:48:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:48:59 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:48:59 INFO  : Context for 'APU' is selected.
+14:48:59 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+14:48:59 INFO  : 'configparams force-mem-access 1' command is executed.
+14:48:59 INFO  : Context for 'APU' is selected.
+14:48:59 INFO  : Boot mode is read from the target.
+14:48:59 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:48:59 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:49:00 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:49:00 INFO  : 'set bp_49_0_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+14:49:01 INFO  : 'con -block -timeout 60' command is executed.
+14:49:01 INFO  : 'bpremove $bp_49_0_fsbl_bp' command is executed.
+14:49:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:49:01 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:49:01 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:49:01 INFO  : 'configparams force-mem-access 0' command is executed.
+14:49:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_49_0_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_49_0_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:49:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:49:01 INFO  : 'con' command is executed.
+14:49:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+14:49:01 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing_system/_ide/scripts/systemdebugger_image_processing_system_standalone.tcl'
+14:54:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:54:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:54:15 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:55:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:55:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:55:14 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:55:42 INFO  : Disconnected from the channel tcfchan#33.
+14:55:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:55:42 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+14:55:42 INFO  : 'jtag frequency' command is executed.
+14:55:42 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:55:42 INFO  : Context for 'APU' is selected.
+14:55:42 INFO  : System reset is completed.
+14:55:45 INFO  : 'after 3000' command is executed.
+14:55:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:55:48 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:55:48 INFO  : Context for 'APU' is selected.
+14:55:48 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+14:55:48 INFO  : 'configparams force-mem-access 1' command is executed.
+14:55:48 INFO  : Context for 'APU' is selected.
+14:55:48 INFO  : Boot mode is read from the target.
+14:55:48 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:55:48 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:55:49 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:55:49 INFO  : 'set bp_55_49_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+14:55:50 INFO  : 'con -block -timeout 60' command is executed.
+14:55:50 INFO  : 'bpremove $bp_55_49_fsbl_bp' command is executed.
+14:55:50 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:55:50 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:55:50 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:55:50 INFO  : 'configparams force-mem-access 0' command is executed.
+14:55:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_55_49_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_55_49_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:55:50 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:55:50 INFO  : 'con' command is executed.
+14:55:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+14:55:50 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing_system/_ide/scripts/systemdebugger_image_processing_system_standalone.tcl'
+14:56:26 INFO  : Disconnected from the channel tcfchan#34.
+14:56:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:56:26 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+14:56:26 INFO  : 'jtag frequency' command is executed.
+14:56:26 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:56:26 INFO  : Context for 'APU' is selected.
+14:56:27 INFO  : System reset is completed.
+14:56:30 INFO  : 'after 3000' command is executed.
+14:56:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:56:33 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:56:33 INFO  : Context for 'APU' is selected.
+14:56:33 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+14:56:33 INFO  : 'configparams force-mem-access 1' command is executed.
+14:56:33 INFO  : Context for 'APU' is selected.
+14:56:33 INFO  : Boot mode is read from the target.
+14:56:33 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:56:33 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:56:33 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:56:33 INFO  : 'set bp_56_33_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+14:56:35 INFO  : 'con -block -timeout 60' command is executed.
+14:56:35 INFO  : 'bpremove $bp_56_33_fsbl_bp' command is executed.
+14:56:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:56:35 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:56:35 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:56:35 INFO  : 'configparams force-mem-access 0' command is executed.
+14:56:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_56_33_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_56_33_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:56:35 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:56:35 INFO  : 'con' command is executed.
+14:56:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+14:56:35 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing_system/_ide/scripts/systemdebugger_image_processing_system_standalone.tcl'
+14:56:46 INFO  : Disconnected from the channel tcfchan#35.
+14:56:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:56:46 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+14:56:46 INFO  : 'jtag frequency' command is executed.
+14:56:46 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+14:56:46 INFO  : Context for 'APU' is selected.
+14:56:47 INFO  : System reset is completed.
+14:56:50 INFO  : 'after 3000' command is executed.
+14:56:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:56:53 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+14:56:53 INFO  : Context for 'APU' is selected.
+14:56:53 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+14:56:53 INFO  : 'configparams force-mem-access 1' command is executed.
+14:56:53 INFO  : Context for 'APU' is selected.
+14:56:53 INFO  : Boot mode is read from the target.
+14:56:53 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:56:53 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:56:54 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:56:54 INFO  : 'set bp_56_54_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+14:56:55 INFO  : 'con -block -timeout 60' command is executed.
+14:56:55 INFO  : 'bpremove $bp_56_54_fsbl_bp' command is executed.
+14:56:55 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:56:55 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+14:56:55 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf' is downloaded to processor 'psu_cortexa53_0'.
+14:56:55 INFO  : 'configparams force-mem-access 0' command is executed.
+14:56:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_56_54_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_56_54_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:56:55 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+14:56:55 INFO  : 'con' command is executed.
+14:56:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+14:56:55 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing_system/_ide/scripts/systemdebugger_image_processing_system_standalone.tcl'
+14:58:44 INFO  : Result from executing command 'removePlatformRepo': 
+14:59:14 INFO  : Result from executing command 'getProjects': bitstream_final
+14:59:14 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+14:59:18 INFO  : Checking for BSP changes to sync application flags for project 'image_processing'...
+14:59:26 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+14:59:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:59:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+14:59:52 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+15:00:13 INFO  : Disconnected from the channel tcfchan#36.
+15:00:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:00:14 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+15:00:14 INFO  : 'jtag frequency' command is executed.
+15:00:14 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+15:00:14 INFO  : Context for 'APU' is selected.
+15:00:14 INFO  : System reset is completed.
+15:00:17 INFO  : 'after 3000' command is executed.
+15:00:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+15:00:20 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+15:00:20 INFO  : Context for 'APU' is selected.
+15:00:20 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+15:00:20 INFO  : 'configparams force-mem-access 1' command is executed.
+15:00:20 INFO  : Context for 'APU' is selected.
+15:00:20 INFO  : Boot mode is read from the target.
+15:00:20 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:00:20 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+15:00:21 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+15:00:21 INFO  : 'set bp_0_21_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+15:00:22 INFO  : 'con -block -timeout 60' command is executed.
+15:00:22 INFO  : 'bpremove $bp_0_21_fsbl_bp' command is executed.
+15:00:22 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:00:22 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+15:00:22 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf' is downloaded to processor 'psu_cortexa53_0'.
+15:00:22 INFO  : 'configparams force-mem-access 0' command is executed.
+15:00:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_0_21_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_0_21_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:00:22 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:00:22 INFO  : 'con' command is executed.
+15:00:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+15:00:22 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing_system/_ide/scripts/systemdebugger_image_processing_system_standalone.tcl'
+15:01:54 INFO  : Result from executing command 'removePlatformRepo': 
+15:02:24 INFO  : Result from executing command 'getProjects': bitstream_final
+15:02:24 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+15:02:27 INFO  : Checking for BSP changes to sync application flags for project 'image_processing'...
+15:02:35 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/fsbl.elf': No such file
+
+15:02:51 ERROR : XSCT server calls should not be made from TCF thread.
+java.lang.RuntimeException: XSCT server calls should not be made from TCF thread.
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueAndWait(XSDBCommandManager.java:392) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:325) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.populateDesignProps(HwPlatform.java:521) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.isZynq(HwPlatform.java:1101) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.getArchFamily(HwPlatform.java:587) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readCrossTriggerModel(BaseLaunchConfigModel.java:174) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readAndSetAttributes(BaseLaunchConfigModel.java:156) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.ui.SdsLaunchConfigModel.newInstance(SdsLaunchConfigModel.java:109) [com.xilinx.sdx.sdsoc.debug.ui_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.createConfigModel(SdsTcfLaunchDelegate.java:85) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.generateReports(SdsTcfLaunchDelegate.java:641) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.onDisconnected(SdsTcfLaunchDelegate.java:615) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.ui.model.TCFModelManager$1.onDisconnected(TCFModelManager.java:79) [org.eclipse.tcf.debug.ui_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.onDisconnected(TCFLaunch.java:532) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch$43.onChannelClosed(TCFLaunch.java:1643) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:858) [org.eclipse.tcf.core_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98) [org.eclipse.tcf_1.7.0.202210132147.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+15:02:51 INFO  : Disconnected from the channel tcfchan#40.
+15:02:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:02:52 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+15:02:52 INFO  : 'jtag frequency' command is executed.
+15:02:52 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+15:02:52 INFO  : Context for 'APU' is selected.
+15:02:52 INFO  : System reset is completed.
+15:02:55 INFO  : 'after 3000' command is executed.
+15:02:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+15:02:59 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+15:02:59 INFO  : Context for 'APU' is selected.
+15:02:59 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+15:02:59 INFO  : 'configparams force-mem-access 1' command is executed.
+15:02:59 INFO  : Context for 'APU' is selected.
+15:02:59 INFO  : Boot mode is read from the target.
+15:02:59 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:02:59 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+15:02:59 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+15:02:59 INFO  : 'set bp_2_59_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+15:03:00 INFO  : 'con -block -timeout 60' command is executed.
+15:03:00 INFO  : 'bpremove $bp_2_59_fsbl_bp' command is executed.
+15:03:00 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:03:01 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+15:03:01 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf' is downloaded to processor 'psu_cortexa53_0'.
+15:03:01 INFO  : 'configparams force-mem-access 0' command is executed.
+15:03:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_2_59_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_2_59_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:03:01 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+15:03:01 INFO  : 'con' command is executed.
+15:03:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+15:03:01 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing_system/_ide/scripts/systemdebugger_image_processing_system_standalone.tcl'
+15:03:32 INFO  : Disconnected from the channel tcfchan#44.
+17:31:46 DEBUG : Logs will be stored at '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/IDE.log'.
+17:31:46 INFO  : Launching XSCT server: xsct -n  -interactive /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/temp_xsdb_launch_script.tcl
+17:31:47 INFO  : Platform repository initialization has completed.
+17:31:48 INFO  : Registering command handlers for Vitis TCF services
+17:31:48 INFO  : XSCT server has started successfully.
+17:31:48 INFO  : plnx-install-location is set to ''
+17:31:48 INFO  : Successfully done setting XSCT server connection channel  
+17:31:48 INFO  : Successfully done query RDI_DATADIR 
+17:31:48 INFO  : Successfully done setting workspace for the tool. 
+17:32:54 INFO  : No changes in MSS file content so sources will not be generated.
+18:14:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+18:15:12 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+18:15:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:31 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+18:15:31 INFO  : 'jtag frequency' command is executed.
+18:15:31 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+18:15:31 INFO  : Context for 'APU' is selected.
+18:15:31 INFO  : System reset is completed.
+18:15:34 INFO  : 'after 3000' command is executed.
+18:15:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+18:15:38 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+18:15:38 INFO  : Context for 'APU' is selected.
+18:15:38 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+18:15:38 INFO  : 'configparams force-mem-access 1' command is executed.
+18:15:38 INFO  : Context for 'APU' is selected.
+18:15:38 INFO  : Boot mode is read from the target.
+18:15:38 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+18:15:38 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+18:15:38 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+18:15:39 INFO  : 'set bp_15_38_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+18:15:40 INFO  : 'con -block -timeout 60' command is executed.
+18:15:40 INFO  : 'bpremove $bp_15_38_fsbl_bp' command is executed.
+18:15:40 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+18:15:40 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+18:15:40 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf' is downloaded to processor 'psu_cortexa53_0'.
+18:15:40 INFO  : 'configparams force-mem-access 0' command is executed.
+18:15:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_15_38_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_15_38_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:15:40 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+18:15:40 INFO  : 'con' command is executed.
+18:15:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+18:15:40 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing_system/_ide/scripts/systemdebugger_image_processing_system_standalone.tcl'
+18:49:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:49:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+18:49:05 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+18:49:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:49:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+18:49:21 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+18:49:31 INFO  : Disconnected from the channel tcfchan#1.
+18:49:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:49:31 INFO  : Jtag cable 'Avnet USB-to-JTAG/UART Pod V1 1234-oj1A' is selected.
+18:49:31 INFO  : 'jtag frequency' command is executed.
+18:49:31 INFO  : Sourcing of '/home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl' is done.
+18:49:31 INFO  : Context for 'APU' is selected.
+18:49:32 INFO  : System reset is completed.
+18:49:35 INFO  : 'after 3000' command is executed.
+18:49:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+18:49:38 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit"
+18:49:38 INFO  : Context for 'APU' is selected.
+18:49:38 INFO  : Hardware design and registers information is loaded from '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa'.
+18:49:38 INFO  : 'configparams force-mem-access 1' command is executed.
+18:49:38 INFO  : Context for 'APU' is selected.
+18:49:38 INFO  : Boot mode is read from the target.
+18:49:38 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+18:49:38 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+18:49:38 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+18:49:38 INFO  : 'set bp_49_38_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+18:49:39 INFO  : 'con -block -timeout 60' command is executed.
+18:49:39 INFO  : 'bpremove $bp_49_38_fsbl_bp' command is executed.
+18:49:39 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+18:49:39 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+18:49:40 INFO  : The application '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf' is downloaded to processor 'psu_cortexa53_0'.
+18:49:40 INFO  : 'configparams force-mem-access 0' command is executed.
+18:49:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/dani/Xilinx/Vitis/2022.2/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}
+fpga -file /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/_ide/bitstream/bitstream_final.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/hw/bitstream_final.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/boot/fsbl.elf
+set bp_49_38_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_49_38_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing/Debug/image_processing.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+18:49:40 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+18:49:40 INFO  : 'con' command is executed.
+18:49:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+18:49:40 INFO  : Launch script is exported to file '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/image_processing_system/_ide/scripts/systemdebugger_image_processing_system_standalone.tcl'
+19:03:48 INFO  : Disconnected from the channel tcfchan#2.
+19:20:44 DEBUG : Logs will be stored at '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/IDE.log'.
+19:20:44 INFO  : Launching XSCT server: xsct -n  -interactive /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/temp_xsdb_launch_script.tcl
+19:20:45 INFO  : Platform repository initialization has completed.
+19:20:45 INFO  : Registering command handlers for Vitis TCF services
+19:20:46 INFO  : XSCT server has started successfully.
+19:20:46 INFO  : Successfully done setting XSCT server connection channel  
+19:20:46 INFO  : plnx-install-location is set to ''
+19:20:46 INFO  : Successfully done query RDI_DATADIR 
+19:20:46 INFO  : Successfully done setting workspace for the tool. 

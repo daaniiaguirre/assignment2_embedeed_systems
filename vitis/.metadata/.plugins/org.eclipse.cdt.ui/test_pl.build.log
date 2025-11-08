@@ -1,0 +1,21 @@
+14:38:37 **** Build of configuration Debug for project test_pl ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/standalone_psu_cortexa53_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: test_pl.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vitis/bitstream_final/export/bitstream_final/sw/bitstream_final/standalone_psu_cortexa53_0/bsplib/lib -o "test_pl.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: test_pl.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size test_pl.elf  |tee "test_pl.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  40868	   2072	  20796	  63736	   f8f8	test_pl.elf
+Finished building: test_pl.elf.size
+ 
+
+14:38:37 Build Finished (took 390ms)
+

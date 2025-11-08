@@ -1,0 +1,137 @@
+#include "xparameters.h"
+#include "xuartps.h"
+#include "ximage_processing.h"
+#include "xil_printf.h"
+#include "xil_cache.h"
+
+#define IMG_WIDTH    50
+#define IMG_HEIGHT   50
+#define IMG_SIZE     IMG_WIDTH * IMG_HEIGHT
+
+#define UART_DEVICE_ID   XPAR_XUARTPS_1_DEVICE_ID   // UART1 works (USB1)
+#define UART_BAUDRATE    9600
+
+static XUartPs Uart_Ps;
+static XImage_processing ImageIp;
+
+/*******************************************************************/
+/* UART initialization                                             */
+/*******************************************************************/
+int UartPs_Init(u16 DeviceId)
+{
+    XUartPs_Config *Config;
+    int Status;
+
+    Config = XUartPs_LookupConfig(DeviceId);
+    if (Config == NULL)
+        return XST_FAILURE;
+
+    Status = XUartPs_CfgInitialize(&Uart_Ps, Config, Config->BaseAddress);
+    if (Status != XST_SUCCESS)
+        return Status;
+
+    XUartPs_SetOperMode(&Uart_Ps, XUARTPS_OPER_MODE_NORMAL);
+    Status = XUartPs_SetBaudRate(&Uart_Ps, UART_BAUDRATE);
+    if (Status != XST_SUCCESS)
+        return Status;
+
+    return XST_SUCCESS;
+}
+
+/*******************************************************************/
+/* Helper: blocking receive bytes                                  */
+/*******************************************************************/
+int UartPs_RecvBytes(u8 *BufPtr, u32 Len)
+{
+    u32 Received = 0;
+    while (Received < Len)
+    {
+        int n = XUartPs_Recv(&Uart_Ps, &BufPtr[Received], Len - Received);
+        if (n < 0)
+            return XST_FAILURE;
+        Received += (u32)n;
+    }
+    return XST_SUCCESS;
+}
+
+/*******************************************************************/
+/* Helper: blocking send bytes                                     */
+/*******************************************************************/
+int UartPs_SendBytes(u8 *BufPtr, u32 Len)
+{
+    u32 Sent = 0;
+    while (Sent < Len)
+    {
+        int n = XUartPs_Send(&Uart_Ps, &BufPtr[Sent], Len - Sent);
+        if (n < 0)
+            return XST_FAILURE;
+        Sent += (u32)n;
+    }
+    return XST_SUCCESS;
+}
+
+/*******************************************************************/
+/* Main                                                            */
+/*******************************************************************/
+int main()
+{
+    int Status;
+    u8 in_img[IMG_SIZE];
+    u8 out_img[IMG_SIZE];
+
+    Xil_ICacheEnable();
+    Xil_DCacheEnable();
+
+    xil_printf("Image processing app started.\r\n");
+
+    /***** Init UART *****/
+    Status = UartPs_Init(UART_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("UART init failed.\r\n");
+        return XST_FAILURE;
+    }
+
+    /***** Init Image Processing IP *****/
+    Status = XImage_processing_Initialize(&ImageIp, XPAR_IMAGE_PROCESSING_0_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("ImageProcessing IP init failed.\r\n");
+        return XST_FAILURE;
+    }
+
+    xil_printf("Waiting for %d bytes from host...\r\n", IMG_SIZE);
+
+    /***** 1) Receive image *****/
+    Status = UartPs_RecvBytes(in_img, IMG_SIZE);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Error receiving image.\r\n");
+        return XST_FAILURE;
+    }
+    xil_printf("Image received.\r\n");
+
+    Xil_DCacheFlush();
+
+    /***** 2) Write image into IP *****/
+    XImage_processing_Write_in_img_Bytes(&ImageIp, 0, in_img, IMG_SIZE);
+
+    /***** 3) Start IP *****/
+    XImage_processing_Start(&ImageIp);
+    while (!XImage_processing_IsDone(&ImageIp));
+
+    xil_printf("Processing done.\r\n");
+
+    /***** 4) Read result *****/
+    XImage_processing_Read_out_img_Bytes(&ImageIp, 0, out_img, IMG_SIZE);
+    Xil_DCacheInvalidate();
+
+    /***** 5) Send back processed image *****/
+    Status = UartPs_SendBytes(out_img, IMG_SIZE);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Error sending image.\r\n");
+        return XST_FAILURE;
+    }
+
+    xil_printf("Processed image sent back.\r\n");
+
+    while (1);
+    return XST_SUCCESS;
+}

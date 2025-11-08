@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="assignment_image_processing_system-bitFile" value="${project_loc:assignment_image_processing}/_ide/bitstream/vivado_bitstream.bit"/>
+	<item key="assignment_image_processing_system-bmmFile" value=""/>
+	<item key="assignment_image_processing_system-target" value="Local"/>
+	<item key="assignment_image_processing_system-device" value="Auto Detect"/>
+	<item key="assignment_image_processing_system-partial_bit" value="false"/>
+	<item key="assignment_image_processing_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="assignment_image_processing_system"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Avnet USB-to-JTAG/UART Pod V1 1234-oj1A&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0&quot;,&quot;3&quot;:&quot;jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-5ba00477-0&quot;}}]}"/>
+</section>

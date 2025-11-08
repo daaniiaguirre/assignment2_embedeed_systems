@@ -1,0 +1,5 @@
+/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment/solution1/.autopilot/db/image_processing.pp.0.cpp:416:2: warning: Added loop label VITIS_LOOP_16_1:   [xilinx-label-all-loops]
+ for (int i = 0; i < (50 * 50); i++) {
+ ^~~
+ VITIS_LOOP_16_1: 
+/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment/solution1/.autopilot/db/image_processing.pp.0.cpp:416:2: note: FIX-IT applied suggested code changes

@@ -1,0 +1,430 @@
+
+*** Running vivado
+    with args -log design_1_image_processing_0_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_image_processing_0_2.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source design_1_image_processing_0_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1441.824 ; gain = 165.023 ; free physical = 18280 ; free virtual = 39332
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/vivado_ip_final/export'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/dani/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_image_processing_0_2
+Command: synth_design -top design_1_image_processing_0_2 -part xczu3eg-sbva484-1-i -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sbva484-1-i
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30770
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/dani/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 3178.883 ; gain = 231.832 ; free physical = 14312 ; free virtual = 35491
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2503.086; parent = 2334.494; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4151.055; parent = 3182.855; children = 968.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_image_processing_0_2' [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ip/design_1_image_processing_0_2/synth/design_1_image_processing_0_2.v:53]
+INFO: [Synth 8-6157] synthesizing module 'image_processing' [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing.v:10]
+INFO: [Synth 8-6157] synthesizing module 'image_processing_AXI_CPU_s_axi' [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'image_processing_AXI_CPU_s_axi_ram' [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:537]
+INFO: [Synth 8-6155] done synthesizing module 'image_processing_AXI_CPU_s_axi_ram' (0#1) [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:537]
+INFO: [Synth 8-6157] synthesizing module 'image_processing_AXI_CPU_s_axi_ram__parameterized0' [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:537]
+INFO: [Synth 8-6155] done synthesizing module 'image_processing_AXI_CPU_s_axi_ram__parameterized0' (0#1) [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:537]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:279]
+INFO: [Synth 8-6155] done synthesizing module 'image_processing_AXI_CPU_s_axi' (0#1) [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:7]
+INFO: [Synth 8-6157] synthesizing module 'image_processing_flow_control_loop_pipe' [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_flow_control_loop_pipe.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'image_processing_flow_control_loop_pipe' (0#1) [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_flow_control_loop_pipe.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'image_processing' (0#1) [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_image_processing_0_2' (0#1) [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ip/design_1_image_processing_0_2/synth/design_1_image_processing_0_2.v:53]
+WARNING: [Synth 8-3848] Net q0 in module/entity image_processing_AXI_CPU_s_axi_ram__parameterized0 does not have driver. [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:550]
+WARNING: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:342]
+WARNING: [Synth 8-6014] Unused sequential element int_out_img_shift0_reg was removed.  [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:524]
+WARNING: [Synth 8-3848] Net int_out_img_write in module/entity image_processing_AXI_CPU_s_axi does not have driver. [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ipshared/00e4/hdl/verilog/image_processing_AXI_CPU_s_axi.v:146]
+WARNING: [Synth 8-7129] Port ap_done_int in module image_processing_flow_control_loop_pipe is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[31] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[30] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[29] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[28] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[27] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[26] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[25] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[24] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[23] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[22] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[21] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[20] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[19] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[18] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[17] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[16] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[15] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[14] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[13] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[12] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[11] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[10] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[9] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[8] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[7] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[6] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[5] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[4] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[3] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[2] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[1] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port q0[0] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we1[3] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we1[2] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we1[1] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we1[0] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[31] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[30] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[29] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[28] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[27] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[26] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[25] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[24] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[23] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[22] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[21] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[20] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[19] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[18] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[17] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[16] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[15] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[14] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[13] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[12] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[11] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[10] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[9] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[8] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[7] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[6] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[5] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[4] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[3] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[2] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[1] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d1[0] in module image_processing_AXI_CPU_s_axi_ram__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[3] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[2] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[1] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we0[0] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[31] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[30] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[29] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[28] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[27] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[26] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[25] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[24] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[23] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[22] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[21] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[20] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[19] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[18] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[17] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[16] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[15] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[14] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[13] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[12] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[11] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[10] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[9] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[8] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[7] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[6] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d0[5] in module image_processing_AXI_CPU_s_axi_ram is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3253.820 ; gain = 306.770 ; free physical = 14246 ; free virtual = 35428
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2503.086; parent = 2334.494; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4222.023; parent = 3253.824; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3271.633 ; gain = 324.582 ; free physical = 14246 ; free virtual = 35428
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2503.086; parent = 2334.494; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4239.836; parent = 3271.637; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3271.633 ; gain = 324.582 ; free physical = 14246 ; free virtual = 35428
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2503.086; parent = 2334.494; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4239.836; parent = 3271.637; children = 968.199
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3271.633 ; gain = 0.000 ; free physical = 14240 ; free virtual = 35422
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ip/design_1_image_processing_0_2/constraints/image_processing_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.gen/sources_1/bd/design_1/ip/design_1_image_processing_0_2/constraints/image_processing_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.runs/design_1_image_processing_0_2_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.runs/design_1_image_processing_0_2_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3435.383 ; gain = 0.000 ; free physical = 14370 ; free virtual = 35564
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3435.383 ; gain = 0.000 ; free physical = 14370 ; free virtual = 35564
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/dani/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3435.383 ; gain = 488.332 ; free physical = 14366 ; free virtual = 35563
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2503.086; parent = 2334.494; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4371.570; parent = 3403.371; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sbva484-1-i
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3435.383 ; gain = 488.332 ; free physical = 14366 ; free virtual = 35563
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2503.086; parent = 2334.494; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4371.570; parent = 3403.371; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.runs/design_1_image_processing_0_2_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3435.383 ; gain = 488.332 ; free physical = 14365 ; free virtual = 35563
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2503.086; parent = 2334.494; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4371.570; parent = 3403.371; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 3435.383 ; gain = 488.332 ; free physical = 14365 ; free virtual = 35564
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2503.086; parent = 2334.494; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4371.570; parent = 3403.371; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Registers : 
+	               32 Bit    Registers := 4     
+	               14 Bit    Registers := 1     
+	               12 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 17    
++---RAMs : 
+	              19K Bit	(625 X 32 bit)          RAMs := 2     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 15    
+	   5 Input   32 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 1     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 13    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 3435.383 ; gain = 488.332 ; free physical = 14447 ; free virtual = 35648
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2503.086; parent = 2334.494; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4371.570; parent = 3403.371; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name | RTL Object                          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------+-------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst        | AXI_CPU_s_axi_U/int_in_img/mem_reg  | 0 K x 32(READ_FIRST)   | W | R | 0 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst        | AXI_CPU_s_axi_U/int_out_img/mem_reg | 0 K x 32(READ_FIRST)   | W |   | 0 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
++------------+-------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 3803.492 ; gain = 856.441 ; free physical = 13721 ; free virtual = 34970
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3059.548; parent = 2891.031; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4771.695; parent = 3803.496; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 3841.539 ; gain = 894.488 ; free physical = 13659 ; free virtual = 34908
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3069.325; parent = 2900.809; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4809.742; parent = 3841.543; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|Module Name | RTL Object                          | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | Cascade Heights | 
++------------+-------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+|inst        | AXI_CPU_s_axi_U/int_in_img/mem_reg  | 0 K x 32(READ_FIRST)   | W | R | 0 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
+|inst        | AXI_CPU_s_axi_U/int_out_img/mem_reg | 0 K x 32(READ_FIRST)   | W |   | 0 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      |                 | 
++------------+-------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+-----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/AXI_CPU_s_axi_U/int_in_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/AXI_CPU_s_axi_U/int_in_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/AXI_CPU_s_axi_U/int_out_img/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 3842.547 ; gain = 895.496 ; free physical = 13651 ; free virtual = 34900
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3069.841; parent = 2901.324; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4810.750; parent = 3842.551; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3842.547 ; gain = 895.496 ; free physical = 13537 ; free virtual = 34786
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3070.182; parent = 2901.667; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4810.750; parent = 3842.551; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3842.547 ; gain = 895.496 ; free physical = 13529 ; free virtual = 34778
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3070.182; parent = 2901.667; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4810.750; parent = 3842.551; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3842.547 ; gain = 895.496 ; free physical = 13529 ; free virtual = 34778
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3070.182; parent = 2901.667; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4810.750; parent = 3842.551; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3842.547 ; gain = 895.496 ; free physical = 13529 ; free virtual = 34778
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3070.182; parent = 2901.667; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4810.750; parent = 3842.551; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3842.547 ; gain = 895.496 ; free physical = 13512 ; free virtual = 34761
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3070.182; parent = 2901.667; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4810.750; parent = 3842.551; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3842.547 ; gain = 895.496 ; free physical = 13496 ; free virtual = 34745
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3070.182; parent = 2901.667; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4810.750; parent = 3842.551; children = 968.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |LUT1     |     2|
+|2     |LUT2     |    19|
+|3     |LUT3     |    32|
+|4     |LUT4     |    17|
+|5     |LUT5     |    29|
+|6     |LUT6     |    67|
+|7     |RAMB36E2 |     2|
+|8     |FDRE     |    90|
+|9     |FDSE     |     3|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3842.547 ; gain = 895.496 ; free physical = 13498 ; free virtual = 34747
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3070.182; parent = 2901.667; children = 168.592
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4810.750; parent = 3842.551; children = 968.199
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 3842.547 ; gain = 731.746 ; free physical = 13473 ; free virtual = 34721
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 3842.555 ; gain = 895.496 ; free physical = 13473 ; free virtual = 34721
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3853.516 ; gain = 0.000 ; free physical = 13562 ; free virtual = 34811
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3889.402 ; gain = 0.000 ; free physical = 13555 ; free virtual = 34804
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 6b74f311
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 3889.402 ; gain = 1775.766 ; free physical = 13598 ; free virtual = 34847
+INFO: [Common 17-1381] The checkpoint '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.runs/design_1_image_processing_0_2_synth_1/design_1_image_processing_0_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_image_processing_0_2, cache-ID = 2d5d4e143ab7183d
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vivado/assignment_vivado.runs/design_1_image_processing_0_2_synth_1/design_1_image_processing_0_2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_image_processing_0_2_utilization_synth.rpt -pb design_1_image_processing_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  8 11:38:54 2025...

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="assignment_image_processing" location="/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vitis/assignment_image_processing" platform="/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vitis/vivado_bitstream/export/vivado_bitstream/vivado_bitstream.xpfm" platformUID="xilinx:ultra96v2::0.0(custom)" systemProject="assignment_image_processing_system" sysConfig="vivado_bitstream" runtime="cpp" cpu="standalone_psu_cortexa53_0" cpuInstance="psu_cortexa53_0" os="standalone" mssSignature="338bfbe0a0836c07fbc3e43e61b2a2c5">
+  <configuration name="Debug" id="xilinx.gnu.arm.a53.exe.debug.870885294">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.arm.a53.exe.release.217659813" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

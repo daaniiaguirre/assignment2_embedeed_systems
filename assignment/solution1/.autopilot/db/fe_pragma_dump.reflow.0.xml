@@ -1,0 +1,5 @@
+<pragmas>
+<pragma file="image_processing.cpp" line="11" pragmaType="interface" parentfunction="image_processing" mode="s_axilite" port="" bundle="AXI_CPU" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="image_processing.cpp" line="12" pragmaType="interface" parentfunction="image_processing" mode="s_axilite" port="in_img" bundle="AXI_CPU" offset="-1" name="" clock="" impl="" register="0"/>
+<pragma file="image_processing.cpp" line="13" pragmaType="interface" parentfunction="image_processing" mode="s_axilite" port="out_img" bundle="AXI_CPU" offset="-1" name="" clock="" impl="" register="0"/>
+</pragmas>

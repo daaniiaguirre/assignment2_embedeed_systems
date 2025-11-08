@@ -1,0 +1,36 @@
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: image_processing.cpp, Line: 17, Column: 29 }
+Function:        _Z16image_processingPVhS0_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.body.load.3
+  - String:          ' '
+  - ArrayName:       in_img
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'image_processing(unsigned char volatile*, unsigned char volatile*)'
+    DebugLoc:        { File: image_processing.cpp, Line: 10, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            NonSimpleMemoryAccess
+DebugLoc:        { File: image_processing.cpp, Line: 21, Column: 20 }
+Function:        _Z16image_processingPVhS0_
+Args:            
+  - String:          Volatile or Atomic access cannot be transformed
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        for.body.store.14
+  - String:          ' '
+  - ArrayName:       out_img
+  - String:          ' '
+  - BundleName:      ''
+  - String:          ' '
+  - Function:        'image_processing(unsigned char volatile*, unsigned char volatile*)'
+    DebugLoc:        { File: image_processing.cpp, Line: 10, Column: 0 }
+  - String:          ' '
+...

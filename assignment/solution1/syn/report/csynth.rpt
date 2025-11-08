@@ -1,0 +1,115 @@
+
+
+================================================================
+== Synthesis Summary Report of 'image_processing'
+================================================================
++ General Information: 
+    * Date:           Sat Nov  8 10:48:50 2025
+    * Version:        2022.2 (Build 3670227 on Oct 13 2022)
+    * Project:        assignment
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynquplus
+    * Target device:  xczu3eg-sbva484-1-i
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +--------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    |       Modules      | Issue|      | Latency |  Latency  | Iteration|         | Trip |          |         |    |           |           |     |
+    |       & Loops      | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|  BRAM   | DSP|     FF    |    LUT    | URAM|
+    +--------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+    |+ image_processing  |     -|  3.24|     2502|  2.502e+04|         -|     2503|     -|        no|  4 (~0%)|   -|  223 (~0%)|  290 (~0%)|    -|
+    | o VITIS_LOOP_16_1  |     -|  7.30|     2500|  2.500e+04|         2|        1|  2500|       yes|        -|   -|          -|          -|    -|
+    +--------------------+------+------+---------+-----------+----------+---------+------+----------+---------+----+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+-------------------+
+| Interface     | Data Width | Address Width | Offset | Register | Resource Estimate |
++---------------+------------+---------------+--------+----------+-------------------+
+| s_axi_AXI_CPU | 32         | 14            | 4096   | 0        | BRAM=4            |
++---------------+------------+---------------+--------+----------+-------------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_AXI_CPU | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_AXI_CPU | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_AXI_CPU | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_AXI_CPU | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+----------+
+| Argument | Direction | Datatype |
++----------+-----------+----------+
+| in_img   | in        | pointer  |
+| out_img  | out       | pointer  |
++----------+-----------+----------+
+
+* SW-to-HW Mapping
++----------+---------------+---------+-------------------------------------+
+| Argument | HW Interface  | HW Type | HW Info                             |
++----------+---------------+---------+-------------------------------------+
+| in_img   | s_axi_AXI_CPU | memory  | name=in_img offset=4096 range=4096  |
+| out_img  | s_axi_AXI_CPU | memory  | name=out_img offset=8192 range=4096 |
++----------+---------------+---------+-------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+  No burst in design
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------+-----+--------+----------+-----+--------+---------+
+| Name                 | DSP | Pragma | Variable | Op  | Impl   | Latency |
++----------------------+-----+--------+----------+-----+--------+---------+
+| + image_processing   | 0   |        |          |     |        |         |
+|   add_ln16_fu_112_p2 | -   |        | add_ln16 | add | fabric | 0       |
+|   temp_fu_132_p2     | -   |        | temp     | add | fabric | 0       |
+|   add_ln21_fu_146_p2 | -   |        | add_ln21 | add | fabric | 0       |
++----------------------+-----+--------+----------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+---------------------------------------+------------------------------------------------------+
+| Type      | Options                               | Location                                             |
++-----------+---------------------------------------+------------------------------------------------------+
+| interface | s_axilite port=return bundle=AXI_CPU  | image_processing.cpp:11 in image_processing, return  |
+| interface | s_axilite port=in_img bundle=AXI_CPU  | image_processing.cpp:12 in image_processing, in_img  |
+| interface | s_axilite port=out_img bundle=AXI_CPU | image_processing.cpp:13 in image_processing, out_img |
++-----------+---------------------------------------+------------------------------------------------------+
+
+

@@ -1,0 +1,186 @@
+#include "xparameters.h"
+#include "ximage_processing.h"
+#include "xil_printf.h"
+#include "xil_cache.h"
+#include "xuartps.h"
+
+#define IMG_WIDTH   10
+#define IMG_HEIGHT  10
+#define IMG_SIZE    (IMG_WIDTH * IMG_HEIGHT)
+
+#define UART_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID   // Adjust if your xparameters.h says _1
+
+/*************** Globals ***************/
+XImage_processing ImageIp;   // HLS IP instance
+XUartPs Uart;                // UART instance
+
+/*************** Helper: init image_processing IP ***************/
+int init_image_ip()
+{
+    int status;
+
+    status = XImage_processing_Initialize(&ImageIp,
+                                          XPAR_IMAGE_PROCESSING_0_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("ERROR: Image IP initialization failed\r\n");
+        return XST_FAILURE;
+    }
+
+    xil_printf("Image IP initialized.\r\n");
+    return XST_SUCCESS;
+}
+
+/*************** Helper: init UART ***************/
+int init_uart()
+{
+    int status;
+    XUartPs_Config *config;
+
+    config = XUartPs_LookupConfig(UART_DEVICE_ID);
+    if (config == NULL) {
+        xil_printf("ERROR: UART lookup failed\r\n");
+        return XST_FAILURE;
+    }
+
+    status = XUartPs_CfgInitialize(&Uart, config, config->BaseAddress);
+    if (status != XST_SUCCESS) {
+        xil_printf("ERROR: UART init failed\r\n");
+        return XST_FAILURE;
+    }
+
+    // Set baud rate (must match Python side)
+    status = XUartPs_SetBaudRate(&Uart, 115200);
+    if (status != XST_SUCCESS) {
+        xil_printf("ERROR: UART set baud failed\r\n");
+        return XST_FAILURE;
+    }
+
+    xil_printf("UART initialized at 115200 baud.\r\n");
+    return XST_SUCCESS;
+}
+
+/*************** Helper: blocking UART send/recv ***************/
+void uart_send_bytes(const u8 *buf, int len)
+{
+    int sent = 0;
+    while (sent < len) {
+        int n = XUartPs_Send(&Uart, (u8 *)(buf + sent), len - sent);
+        if (n > 0) {
+            sent += n;
+        }
+    }
+}
+
+void uart_recv_bytes(u8 *buf, int len)
+{
+    int received = 0;
+    while (received < len) {
+        int n = XUartPs_Recv(&Uart, buf + received, len - received);
+        if (n > 0) {
+            received += n;
+        }
+    }
+}
+
+/*************** Run IP on a local test image ***************/
+void run_local_test()
+{
+    u8 input[IMG_SIZE];
+    u8 output[IMG_SIZE];
+
+    xil_printf("Running local 10x10 test...\r\n");
+
+    // Simple pattern: 0, 10, 20, ... (just so we can see the change)
+    for (int i = 0; i < IMG_SIZE; i++) {
+        input[i] = (i * 10) % 256;
+    }
+
+    // Write input pixels into the IP
+    // offset = 0 (start), length = IMG_SIZE bytes
+    XImage_processing_Write_in_img_Bytes(&ImageIp, 0,
+                                         (char *)input, IMG_SIZE);
+
+    // Start IP
+    XImage_processing_Start(&ImageIp);
+
+    // Wait until done
+    while (!XImage_processing_IsDone(&ImageIp));
+
+    // Read output pixels from IP
+    XImage_processing_Read_out_img_Bytes(&ImageIp, 0,
+                                         (char *)output, IMG_SIZE);
+
+    xil_printf("Local test result (first 10 pixels):\r\n");
+    for (int i = 0; i < 10; i++) {
+        xil_printf("%3d -> %3d\r\n", input[i], output[i]);
+    }
+    xil_printf("Local test finished.\r\n");
+}
+
+/*************** Process image from UART ***************/
+/*
+Protocol:
+- PC sends exactly 100 bytes (10x10 grayscale).
+- Board:
+    - receives 100 bytes
+    - writes them to IP
+    - runs IP
+    - reads 100 processed bytes
+    - sends 100 bytes back
+Loop forever.
+*/
+void uart_image_loop()
+{
+    u8 in_buf[IMG_SIZE];
+    u8 out_buf[IMG_SIZE];
+
+    xil_printf("UART image loop started. Waiting for 100-byte images...\r\n");
+
+    while (1) {
+        // 1) Receive one 10x10 image
+        uart_recv_bytes(in_buf, IMG_SIZE);
+
+        // 2) Write it into IP input buffer
+        XImage_processing_Write_in_img_Bytes(&ImageIp, 0,
+                                             (char *)in_buf, IMG_SIZE);
+
+        // 3) Start IP
+        XImage_processing_Start(&ImageIp);
+
+        // 4) Wait for completion
+        while (!XImage_processing_IsDone(&ImageIp));
+
+        // 5) Read processed image
+        XImage_processing_Read_out_img_Bytes(&ImageIp, 0,
+                                             (char *)out_buf, IMG_SIZE);
+
+        // 6) Send processed image back to PC
+        uart_send_bytes(out_buf, IMG_SIZE);
+    }
+}
+
+/*************** main ***************/
+int main()
+{
+    int status;
+
+    xil_printf("===== Image Processing Bare-Metal Test =====\r\n");
+
+    status = init_image_ip();
+    if (status != XST_SUCCESS) return XST_FAILURE;
+
+    status = init_uart();
+    if (status != XST_SUCCESS) return XST_FAILURE;
+
+    // Optional: disable caches for simplicity (small data size)
+    Xil_DCacheDisable();
+    Xil_ICacheDisable();
+
+    // 1) Run internal self-test first
+    run_local_test();
+
+    // 2) Enter UART loop so Python can send images
+    uart_image_loop();
+
+    return 0;
+}

@@ -1,0 +1,27 @@
+18:23:53 DEBUG : Logs will be stored at '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vitis/IDE.log'.
+18:23:54 INFO  : Launching XSCT server: xsct -n  -interactive /home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vitis/temp_xsdb_launch_script.tcl
+18:23:54 INFO  : Registering command handlers for Vitis TCF services
+18:23:54 INFO  : Platform repository initialization has completed.
+18:23:56 INFO  : XSCT server has started successfully.
+18:23:56 INFO  : plnx-install-location is set to ''
+18:23:56 INFO  : Successfully done setting XSCT server connection channel  
+18:23:56 INFO  : Successfully done query RDI_DATADIR 
+18:23:56 INFO  : Successfully done setting workspace for the tool. 
+18:27:48 INFO  : Result from executing command 'getProjects': vivado_bitstream
+18:27:48 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+18:27:48 WARN  : An unexpected exception occurred in the module 'platform project logging'
+18:27:49 INFO  : Platform 'vivado_bitstream' is added to custom repositories.
+18:27:57 INFO  : Platform 'vivado_bitstream' is added to custom repositories.
+18:33:56 INFO  : Result from executing command 'getProjects': vivado_bitstream
+18:33:56 INFO  : Result from executing command 'getPlatforms': vivado_bitstream|/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vitis/vivado_bitstream/export/vivado_bitstream/vivado_bitstream.xpfm;xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+18:34:00 INFO  : Checking for BSP changes to sync application flags for project 'assignment_image_processing'...
+18:38:48 INFO  : Result from executing command 'removePlatformRepo': 
+18:38:53 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+18:39:19 INFO  : Result from executing command 'getProjects': vivado_bitstream
+18:39:19 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/home/dani/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+18:39:22 INFO  : Checking for BSP changes to sync application flags for project 'assignment_image_processing'...
+18:39:28 ERROR : (XSDB Server)readelf: Error: '/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vitis/vivado_bitstream/export/vivado_bitstream/sw/fsbl.elf': No such file
+
+18:43:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:43:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Avnet USB-to-JTAG/UART Pod V1 1234-oj1A" && level==0 && jtag_device_ctx=="jsn-USB-to-JTAG/UART Pod V1-1234-oj1A-14710093-0"}' command is executed.
+18:43:48 INFO  : Device configured successfully with "/home/dani/Desktop/SDU_Master/EmbeddedSystems/assignment/assignment_vitis/assignment_image_processing/_ide/bitstream/vivado_bitstream.bit"
